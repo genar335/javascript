@@ -1,5 +1,3 @@
-export const gigasecond = (given_date) => {
-  let gigasecond_anniversary = new Date();
-  gigasecond_anniversary.setTime(given_date.getTime() + Math.pow(10, 12));
-  return gigasecond_anniversary;
-};
+const GIGASECOND_IN_MS = 10 ** 12;
+
+export const gigasecond = (given_date) => new Date(given_date.getTime() + GIGASECOND_IN_MS);
